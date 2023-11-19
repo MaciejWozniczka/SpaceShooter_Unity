@@ -7,6 +7,8 @@ public class PlayerStats : MonoBehaviour
 {
     [SerializeField] private float maxHealth;
     [SerializeField] private float currentHealth;
+    private int healingTimeInterval = 1;
+    private float timer = 0;
     void Start()
     {
         currentHealth = maxHealth;
@@ -16,7 +18,9 @@ public class PlayerStats : MonoBehaviour
     {
         if (currentHealth < maxHealth)
         {
+            if (Time.time > timer)
             currentHealth++;
+            timer += healingTimeInterval;
         }
     }
 
