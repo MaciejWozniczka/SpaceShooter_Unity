@@ -24,6 +24,7 @@ public class PlayerStats : MonoBehaviour
             if (Time.time > timer)
             {
                 currentHealth++;
+                healthFill.fillAmount = currentHealth / maxHealth;
                 timer += healingTimeInterval;
             }
         }
