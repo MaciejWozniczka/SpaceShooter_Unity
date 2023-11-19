@@ -165,4 +165,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 15
   dmg: 1
-  rb: {fileID: 0}
+  rb: {fileID: 2728526836546494012}
