@@ -102,6 +102,7 @@ MonoBehaviour:
   health: 3
   rb: {fileID: 1569933947338724927}
   dmg: 20
+  enemyExplosion: {fileID: 4635603420386917642, guid: 1d36bc769a98a6648a5450c68455849b, type: 3}
   minSpeed: 8
   maxSpeed: 15
   rotateSpeed: 100

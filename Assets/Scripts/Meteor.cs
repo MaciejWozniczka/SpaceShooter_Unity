@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Meteor : Enemy
@@ -27,6 +28,7 @@ public class Meteor : Enemy
 
     public override void DeathSequence()
     {
+        Instantiate(enemyExplosion, transform.position, transform.rotation);
         Destroy(gameObject);
     }
 
@@ -36,6 +38,7 @@ public class Meteor : Enemy
         {
             PlayerStats playerStats = otherColl.GetComponent<PlayerStats>();
             playerStats.PlayerTakeDamage(dmg);
+            Instantiate(enemyExplosion, transform.position, transform.rotation);
             Destroy(gameObject);
         }
     }

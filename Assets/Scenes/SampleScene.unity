@@ -1994,6 +1994,7 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   healthFill: {fileID: 820804928}
+  playerExplosion: {fileID: 4635603420386917642, guid: 1d36bc769a98a6648a5450c68455849b, type: 3}
 --- !u!1 &1747620443
 GameObject:
   m_ObjectHideFlags: 0

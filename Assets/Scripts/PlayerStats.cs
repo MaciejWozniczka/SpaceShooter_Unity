@@ -9,6 +9,9 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] private float maxHealth;
     [SerializeField] private float currentHealth;
     [SerializeField] private Image healthFill;
+    [SerializeField] private GameObject playerExplosion;
+    [SerializeField] private Animator anim;
+    private bool canPlayAnim;
     private int healingTimeInterval = 1;
     private float timer = 0;
     void Start()
@@ -35,9 +38,23 @@ public class PlayerStats : MonoBehaviour
         currentHealth -= dmg;
         healthFill.fillAmount = currentHealth / maxHealth;
 
+        if (canPlayAnim)
+        {
+            anim.SetTrigger("Damage");
+            StartCoroutine(AntiSpamAnimation());
+        }
+
         if (currentHealth <= 0)
         {
+            Instantiate(playerExplosion, transform.position, transform.rotation);
             Destroy(gameObject);
         }
+    }
+
+    private IEnumerator AntiSpamAnimation()
+    {
+        canPlayAnim = false;
+        yield return new WaitForSeconds(0.15f);
+        canPlayAnim = true;
     }
 }
