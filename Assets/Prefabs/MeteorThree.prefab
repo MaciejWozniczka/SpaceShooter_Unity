@@ -101,6 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 3
   rb: {fileID: 1569933947338724927}
+  dmg: 20
   minSpeed: 8
   maxSpeed: 15
   rotateSpeed: 100
