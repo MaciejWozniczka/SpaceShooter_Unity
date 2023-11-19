@@ -142,8 +142,8 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 18, y: 18, z: 17, w: 18}
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -157,14 +157,15 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 916b695ef27327d4abeae753f545281b
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Health_Icon_0: 6591160121764855195
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
