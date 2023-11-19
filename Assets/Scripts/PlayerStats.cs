@@ -19,8 +19,10 @@ public class PlayerStats : MonoBehaviour
         if (currentHealth < maxHealth)
         {
             if (Time.time > timer)
-            currentHealth++;
-            timer += healingTimeInterval;
+            {
+                currentHealth++;
+                timer += healingTimeInterval;
+            }
         }
     }
 
