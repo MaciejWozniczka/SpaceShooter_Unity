@@ -646,6 +646,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &318225262
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 318225263}
+  m_Layer: 0
+  m_Name: BasicShootingPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &318225263
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 318225262}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.75, z: 0}
+  m_LocalScale: {x: 1.6666665, y: 1.6666665, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1726854528}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &482180232
 GameObject:
   m_ObjectHideFlags: 0
@@ -1280,6 +1311,7 @@ GameObject:
   - component: {fileID: 1726854528}
   - component: {fileID: 1726854527}
   - component: {fileID: 1726854529}
+  - component: {fileID: 1726854532}
   - component: {fileID: 1726854530}
   - component: {fileID: 1726854531}
   m_Layer: 6
@@ -1349,11 +1381,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1726854526}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -4, z: 0}
   m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 318225263}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1726854529
@@ -1489,6 +1522,21 @@ PolygonCollider2D:
       - {x: 0.17999999, y: -0.93085736}
       - {x: 0.31533417, y: -0.9174279}
   m_UseDelaunayMesh: 0
+--- !u!114 &1726854532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1726854526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b1fcdbfef4c1246a2bbe76587fc346, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  laserBullet: {fileID: 0}
+  basicShootPoint: {fileID: 318225263}
+  shootingInterval: 0.3
 --- !u!1 &1747620443
 GameObject:
   m_ObjectHideFlags: 0
